@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
      * @return
      */
     private List<NewsBean> getJsonData(String url) {
-        List<NewsBean> newsBeanlist = new ArrayList<NewsBean>();
+        List<NewsBean> newsBeanlist = new ArrayList<>();
         try {
             String jsonString = readStream(new URL(url).openStream());
             JSONObject jsonObject;
