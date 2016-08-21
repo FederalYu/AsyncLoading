@@ -35,10 +35,11 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     public void onBindViewHolder(MyViewHolder holder, int position) {
         News news = mData.get(position);
 
+        //加载图片
         ImageLoader imageLoader = new ImageLoader(MyApplication.getHttpQueue(), new BitmapCache());
         ImageLoader.ImageListener listener = imageLoader.getImageListener(holder.ivIcon, R.mipmap.ic_launcher, R.mipmap.ic_launcher);
         imageLoader.get(news.getNewsUrl(), listener);
-        
+
         holder.tvTitle.setText(news.getNewsTitle());
         holder.tvContent.setText(news.getNewsContent());
     }
