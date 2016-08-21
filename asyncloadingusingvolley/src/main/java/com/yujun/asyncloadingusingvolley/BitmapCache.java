@@ -12,7 +12,7 @@ import com.android.volley.toolbox.ImageLoader;
 public class BitmapCache implements ImageLoader.ImageCache {
     private LruCache<String, Bitmap> cache;
     //设置内存缓存最大为10M
-    private int maxSize = 10 * 1024 * 1024;
+    private int maxSize = (int) (Runtime.getRuntime().maxMemory() / 8);
 
     public BitmapCache() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB_MR1) {
