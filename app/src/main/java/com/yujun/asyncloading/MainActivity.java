@@ -35,7 +35,6 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * 将url对应的json格式数据转化为所封装的newsBean对象数据
-     *
      * @param url
      * @return
      */
