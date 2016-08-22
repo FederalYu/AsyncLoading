@@ -1,1 +1,1 @@
-include ':asynctaskusingimagecache', ':asyncloadingusingvolley'
+include ':asynctaskusingimagecache', ':asyncloadingusingvolley', ':listviewpageloading'

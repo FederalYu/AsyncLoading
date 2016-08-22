@@ -4,7 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/AsyncLoading.iml" filepath="$PROJECT_DIR$/AsyncLoading.iml" />
       <module fileurl="file://$PROJECT_DIR$/asyncloadingusingvolley/asyncloadingusingvolley.iml" filepath="$PROJECT_DIR$/asyncloadingusingvolley/asyncloadingusingvolley.iml" />
-      <module fileurl="file://$PROJECT_DIR$/asynctaskusingimagecache/app.iml" filepath="$PROJECT_DIR$/asynctaskusingimagecache/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/asynctaskusingimagecache/asynctaskusingimagecache.iml" filepath="$PROJECT_DIR$/asynctaskusingimagecache/asynctaskusingimagecache.iml" />
+      <module fileurl="file://$PROJECT_DIR$/listviewpageloading/listviewpageloading.iml" filepath="$PROJECT_DIR$/listviewpageloading/listviewpageloading.iml" />
     </modules>
   </component>
 </project>

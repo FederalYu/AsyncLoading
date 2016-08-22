@@ -3,10 +3,14 @@ package com.yujun.asyncloading;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
 import android.widget.ListView;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -19,6 +23,7 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
     private ListView mListView;
     public static String URL = "http://www.imooc.com/api/teacher?type=4&num=30";
+    private NewsAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * 将url对应的json格式数据转化为所封装的newsBean对象数据
+     *
      * @param url
      * @return
      */
@@ -103,8 +109,12 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(List<NewsBean> list) {
             super.onPostExecute(list);
-            NewsAdapter adapter = new NewsAdapter(MainActivity.this, list, mListView);
-            mListView.setAdapter(adapter);
+            if (adapter == null) {
+                adapter = new NewsAdapter(MainActivity.this, list, mListView);
+                mListView.setAdapter(adapter);
+            } else {
+
+            }
         }
     }
 }

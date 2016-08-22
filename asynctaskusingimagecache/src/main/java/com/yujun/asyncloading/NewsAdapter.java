@@ -67,8 +67,6 @@ public class NewsAdapter extends BaseAdapter implements AbsListView.OnScrollList
         } else {
             viewHolder = (ViewHolder) convertView.getTag();
         }
-//        viewHolder.ivIcon.setImageResource(R.mipmap.ic_launcher);
-//        new ImageLoader().showImageByThread(viewHolder.ivIcon, mList.get(position).getNewIconUrl());
         mImageLoader.showImageByAsyncTask(viewHolder.ivIcon, mList.get(position).getNewIconUrl());
         viewHolder.ivIcon.setTag(mList.get(position).getNewIconUrl());//给图片设置tag解决由listview的缓存机制造成的图片错位
         viewHolder.tvTitle.setText(mList.get(position).getNewTitle());
